@@ -22,12 +22,12 @@
       packages = {
         default = self.packages.${system}.last;
         
-        last = pkgs.callPackage ./package.nix { 
+        last = pkgs.callPackage ./default.nix { 
           c3c-src = inputs.c3c-last;
           c3c-ver = "0.6.4";
         };
 
-        latest = pkgs.callPackage ./package.nix { 
+        latest = pkgs.callPackage ./default.nix {
           c3c-src = inputs.c3c-latest;
           c3c-ver = "0.6.5";
         };
